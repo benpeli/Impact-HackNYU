@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+  <path d="M10 25C8.5 25 7 23.5 7 22C7 20.5 8.5 19 10 19H11C11 17.5 12.5 16 14 16C15 16 16 16.5 16.5 17.5C17 17 17.5 16 18.5 16C19.5 16 20 16.5 20.5 17C21 16.5 22 16 23 16C25 16 27 17.5 27 20C28.5 20 30 21.5 30 23C30 24.5 28.5 26 27 26H10Z" fill="url(#cloudGradient)"/>
+  <defs>
+    <linearGradient id="cloudGradient" x1="7" y1="16" x2="30" y2="26" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B0D1FF"/>
+      <stop offset="1" stop-color="#4F93FF"/>
+    </linearGradient>
+  </defs>
+</svg>
