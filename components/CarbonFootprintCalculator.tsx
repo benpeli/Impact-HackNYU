@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CarbonFootprintData } from "@/types/CarbonFootprintData";
 
 interface CarbonFootprintCalculatorProps {
   onCalculate: (score: number) => void;
@@ -15,6 +16,17 @@ const CarbonFootprintCalculator: React.FC<CarbonFootprintCalculatorProps> = ({ o
     const score = (electricityUsage * 0.5) + (gasUsage * 0.3) + (carMileage * 0.2);
     const normalizedScore = Math.min(100, Math.max(0, score));
     onCalculate(normalizedScore);
+
+    const date = new Date().toISOString().split('T')[0];
+
+    const newEntry: CarbonFootprintData = { date, score: normalizedScore };
+    const savedData = localStorage.getItem('carbonFootprintData');
+    const data = savedData ? JSON.parse(savedData) : [];
+    data.push(newEntry);
+    localStorage.setItem('carbonFootprintData', JSON.stringify(data));
+
+    console.log("New Entry:", newEntry);
+    console.log("Updated Data:", data);
   };
 
   return (
